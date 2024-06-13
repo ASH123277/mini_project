@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예시사이트</title>
+    <style>
+       @font-face {
+            font-family: 'MaplestoryOTFBold';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *{
+            font-family: 'MaplestoryOTFBold';
+        }
+
+
+        /* =====================마우스 커서 코드===================== */
+
+
+        /* 기본 색상 변수에 담기 */
+        html {
+              /* --color-texta: #1d1d1d; */
+              --color-textb: #c4d5f1;
+          }
+        /* 시스템 커서 안 보이게 숨기기 */
+          body {
+              cursor: none;
+          }
+
+          
+          /* 커스텀 커서 스타일 정의해주기 */
+          .cursor {
+              width: 3rem;
+              height: 3rem;
+              border: 2px solid var(--color-texta);
+              border-radius: 50%;
+              position: absolute;
+              z-index: 1000;
+              transform: translate(-50%, -50%);
+              pointer-events: none;
+              transition: all 0.3s ease;
+              transition-property: background, transform;
+              transform-origin: 100% 100%;
+              backdrop-filter: sepia(20%);
+              background-size: cover;
+              background-color: #c4d5f1;
+          }
+
+    .cursor-grow {
+    transform: scale(2);
+    background-color: var(--color-texta);
+    }
+
+    /* 점선이 들어갈 ::after(pseudo)요소 만들고 크기값 설정해주기*/
+  .gnb li a:hover::after {
+    width: calc(100% - 2rem);
+    height: 3px;
+    background-size: contain; /* 배경 이미지(svg)가 알맞게 들어가도록*/
+  }
+/* hover된 링크의 글자 색상 정의(하얀색)*/
+/* .hovered-link 선택자명은 추후 JS로 추가할 예정!*/
+  .hovered-link {
+      color: var(--color-textb) !important;
+  }
+/* .gnb li a:hover::after의 svg에 배경이미지 지정!*/
+  .hovered-link::after {
+      background-image: url("../img/white_dot.svg");
+  }
+
+  *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================마우스 커서 코드 끝===================== */
+
+
+</style>
+
+
+    <link rel="stylesheet" href="./site_introduce.css">
+
+    <link rel="stylesheet" href="./사이드바/nav_style.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</head>
+
+
+<body>
+    <nav id="navbar">
+        <ul class="navbar-items flexbox-col">
+          <li class="navbar-logo flexbox-left">
+            <a class="navbar-item-inner flexbox">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
+                <polygon points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48" />
+                <polygon
+                  points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28" />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-item flexbox-left">
+            <a class="navbar-item-inner flexbox-left" href="https://www.naver.com">
+              <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="log-in-outline" size="large"></ion-icon>
+              </div>
+              <span class="link-text" data-i18n="login">Login</span>
+            </a>
+          </li>
+          <li class="navbar-item flexbox-left">
+            <a class="navbar-item-inner flexbox-left" href="https://www.naver.com">
+              <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="newspaper-outline" size="large"></ion-icon>
+              </div>
+              <span class="link-text" data-i18n="about">About Interactive</span>
+            </a>
+          </li>
+          <li class="navbar-item flexbox-left">
+            <a class="navbar-item-inner flexbox-left" href="https://www.naver.com">
+              <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="images-outline" size="large"></ion-icon>
+              </div>
+              <span class="link-text" data-i18n="gallery">360VR Gallery</span>
+            </a>
+          </li>
+          <li class="navbar-item flexbox-left">
+            <a class="navbar-item-inner flexbox-left" href="https://www.naver.com">
+              <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="film-outline" size="large"></ion-icon>
+              </div>
+              <span class="link-text" data-i18n="movie">Interactive Movie</span>
+            </a>
+          </li>
+          <li class="navbar-item flexbox-left">
+            <a class="navbar-item-inner flexbox-left" href="https://www.naver.com">
+              <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="game-controller-outline" size="large"></ion-icon>
+              </div>
+              <span class="link-text" data-i18n="game">Quiz Game</span>
+            </a>
+          </li>
+          <li class="navbar-item flexbox-left">
+            <a class="navbar-item-inner flexbox-left" href="https://www.naver.com">
+              <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="people-outline" size="large"></ion-icon>
+              </div>
+              <span class="link-text" data-i18n="team">Team</span>
+            </a>
+          </li>
+          <li class="navbar-item flexbox-left">
+            <a class="navbar-item-inner flexbox-left" id="change-lang" href="#">
+              <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="text-outline" size="large"></ion-icon>
+              </div>
+              <span class="link-text" data-i18n="language">KO (한국어)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    
+
+<span id="title">SITE</span>
+
+
+<div id="container">
+    <div id="parentUp">
+        <div id="Flower"><a href="https://2019.makemepulse.com/" target="_blank"><img src="./Nomadic_tribe.PNG" alt=""></a></div>
+        <div id="HumanMade"><a href="https://humanmade.co.jp/" target="_blank"><img src="./Human_made.PNG" alt=""></a></div>
+    </div><br>
+
+    <div id="parentDown">
+        <div id="Google"><a href="https://doodles.google/search/?form_tags=interactive%20game" target="_blank"><img src="./Google_game.PNG" alt=""></a></div>
+        <div id="Salvator"><a href="https://www.salvatorecasalino.it/interactive-resume/" target="_blank"><img src="./Salvator.PNG" alt=""></a></div>
+    </div>
+</div>   
+
+
+<!-- =====================마우스 커서 코드===================== -->
+
+<header>
+    <div class="cursor"></div>
+
+    <!-- ...
+    ...여러분의 포트폴리오 html코드...
+    ... -->
+  </header> 
+
+<script>
+
+let mouseCursor = document.querySelector(".cursor");
+  let navLinks = document.querySelectorAll(".gnb li a"); //메뉴 링크
+  //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
+  window.addEventListener("scroll", cursor);
+  window.addEventListener("mousemove", cursor);
+  //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
+  function cursor(e) {
+    mouseCursor.style.left = e.pageX + "px";
+    mouseCursor.style.top = e.pageY - scrollY + "px";
+}
+
+navLinks.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      mouseCursor.classList.add("link-grow");
+      mouseCursor.style.zIndex = "-1";
+      link.classList.add("hovered-link");
+    });
+    link.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("link-grow");
+      mouseCursor.style.zIndex = "1000";
+      link.classList.remove("hovered-link");
+    });
+  });
+
+</script>
+
+<!-- =====================마우스 커서 코드 끝===================== -->
+
+
+<script src="./사이드바/nav_script.js"></script>
+</body>
+</html>
